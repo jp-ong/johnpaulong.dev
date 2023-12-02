@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+@import "./variables";
+
+@import "./themes/light";
+@import "./typography";
+@import "./dimensions";
+
+:root {
+  @include typography;
+  @include theme-light;
+  @include dimensions;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background: var(--c-main-background);
+  color: var(--c-main-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}

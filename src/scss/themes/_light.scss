@@ -1,0 +1,22 @@
+@import "../variables";
+
+@mixin theme-light {
+  --c-main-background: #{$c-gray-100};
+  --c-main-text: #{$c-purple-900};
+  --c-main-highlight: #{$c-purple-500};
+  --c-main-fade: #{$c-purple-300};
+
+  --c-none: #{$c-none};
+
+  --c-button-contained-background: #{$c-purple-500};
+  --c-button-contained-text: #{$c-purple-100};
+  --c-button-contained-border: #{$c-purple-500};
+
+  --c-button-outlined-background: #{$c-none};
+  --c-button-outlined-text: #{$c-purple-500};
+  --c-button-outlined-border: #{$c-purple-300};
+
+  --c-button-flat-background: #{$c-none};
+  --c-button-flat-text: #{$c-purple-500};
+  --c-button-flat-border: #{$c-none};
+}

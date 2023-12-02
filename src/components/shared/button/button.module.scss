@@ -1,0 +1,53 @@
+a.button,
+button.button {
+  width: min-content;
+  height: 2.5rem;
+  min-width: min-content;
+  min-height: 2.5rem;
+
+  padding: 0 1rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  border: 2px solid;
+  border-radius: var(--radius-sm);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition-duration: 150ms;
+  transition-property: border-color, background-color, color;
+
+  & > span {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-semi);
+    font-size: var(--fs-md);
+
+    white-space: nowrap;
+  }
+
+  &.max-width {
+    width: 100%;
+  }
+
+  &.contained {
+    background: var(--c-button-contained-background);
+    color: var(--c-button-contained-text);
+    border-color: var(--c-button-contained-border);
+  }
+
+  &.outlined {
+    background: var(--c-button-outlined-background);
+    color: var(--c-button-outlined-text);
+    border-color: var(--c-button-outlined-border);
+  }
+
+  &.flat {
+    background: var(--c-button-flat-background);
+    color: var(--c-button-flat-text);
+    border-color: var(--c-button-flat-border);
+  }
+}

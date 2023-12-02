@@ -1,0 +1,40 @@
+div.container {
+  width: 100%;
+
+  &.spacing-none {
+    padding: 0 1.25rem;
+  }
+
+  &.spacing-xs {
+    padding: 1.25rem 1.25rem;
+  }
+
+  &.spacing-sm {
+    padding: 2.5rem 1.25rem;
+  }
+
+  &.spacing-md {
+    padding: 5rem 1.25rem;
+  }
+
+  &.spacing-lg {
+    padding: 7.5rem 1.25rem;
+  }
+
+  &.spacing-xl {
+    padding: 10rem 1.25rem;
+  }
+}
+
+*.content {
+  width: 100%;
+  margin: 0 auto;
+
+  &.size-md {
+    max-width: var(--screen-md);
+  }
+
+  &.size-lg {
+    max-width: var(--screen-lg);
+  }
+}
