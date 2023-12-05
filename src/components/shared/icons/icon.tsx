@@ -6,7 +6,7 @@ export enum Icons {
 }
 
 interface Props {
-  icon: string;
+  icon: Icons | string;
 }
 
 export const Icon = ({ icon }: Props) => {
