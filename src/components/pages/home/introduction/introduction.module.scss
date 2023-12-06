@@ -1,43 +1,45 @@
-header.header {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 2rem;
-
-  & > div.greeting {
+section.intro {
+  & > header {
     display: flex;
     flex-flow: column nowrap;
-    gap: 1rem;
+    gap: 2rem;
 
-    h1 {
-      font-size: var(--fs-xxl);
-      font-weight: var(--fw-semi);
-    }
+    & > div.greeting {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
 
-    & > p.titles {
-      & > span {
-        padding: 0 0.5rem;
-        color: var(--c-main-highlight);
-        border-right: 1px solid var(--c-main-fade);
-        letter-spacing: 0.8px;
+      h1 {
+        font-size: var(--fs-xxl);
+        font-weight: var(--fw-semi);
+      }
 
-        &:first-of-type {
-          padding-left: 0;
-        }
+      & > p.titles {
+        & > span {
+          padding: 0 0.5rem;
+          color: var(--c-main-highlight);
+          border-right: 1px solid var(--c-main-fade);
+          letter-spacing: 0.8px;
 
-        &:last-of-type {
-          border-right: none;
+          &:first-of-type {
+            padding-left: 0;
+          }
+
+          &:last-of-type {
+            border-right: none;
+          }
         }
       }
     }
-  }
 
-  & > p.summary {
-    line-height: 1.5;
-  }
+    & > p.summary {
+      line-height: 1.5;
+    }
 
-  & > div.cta {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 1rem;
+    & > div.cta {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 1rem;
+    }
   }
 }

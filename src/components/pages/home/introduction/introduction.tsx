@@ -33,7 +33,7 @@ export const Introduction = () => {
 
   return (
     <Container as="section" spacing="md" contentClassName={styles.intro}>
-      <header className={styles.header}>
+      <header>
         <div className={styles.greeting}>
           <div>
             <span>{prefix}</span>
