@@ -39,3 +39,22 @@ ul,
 ol {
   list-style: none;
 }
+
+h1 {
+  font-size: var(--fs-xxl);
+  font-weight: var(--fw-semi);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semi);
+}
+
+h3 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+}
+
+p {
+  line-height: 1.5;
+}
