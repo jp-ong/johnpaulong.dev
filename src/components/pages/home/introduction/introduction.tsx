@@ -32,20 +32,22 @@ export const Introduction = () => {
   ];
 
   return (
-    <Container as="section" spacing="md" contentClassName={styles.intro}>
+    <Container as="section" spacing="md" contentClassName={styles.introduction}>
       <header>
         <div className={styles.greeting}>
           <div>
             <span>{prefix}</span>
             <h1>{name}</h1>
           </div>
-          <p className={styles.titles}>
+          <p>
             {titles.map((title) => (
-              <span key={title}>{title}</span>
+              <span key={title} className={styles.title}>
+                {title}
+              </span>
             ))}
           </p>
         </div>
-        <p className={styles.summary}>{summary}</p>
+        <p>{summary}</p>
         <div className={styles.cta}>
           {links.map((link) => (
             <Button

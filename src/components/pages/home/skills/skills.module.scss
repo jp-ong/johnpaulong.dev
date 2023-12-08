@@ -1,0 +1,35 @@
+section.skills {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+
+  & > div.stack {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.75rem;
+
+    & > ul {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0.75rem;
+
+      & > li {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.5rem;
+
+        & > div {
+          width: 5rem;
+          height: 5rem;
+
+          border: 1px solid var(--c-button-contained-border);
+          border-radius: 0.5rem;
+        }
+
+        & > span {
+          font-size: var(--fs-sm);
+        }
+      }
+    }
+  }
+}
