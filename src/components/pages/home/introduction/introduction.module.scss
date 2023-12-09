@@ -4,10 +4,25 @@ section.introduction {
     flex-flow: column nowrap;
     gap: 2rem;
 
-    & > div.greeting {
+    & > div.greetings {
       display: flex;
       flex-flow: column nowrap;
       gap: 1rem;
+
+      & > div {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        gap: 2rem;
+      }
+
+      img.pfp {
+        width: 7.5rem;
+        height: 7.5rem;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: var(--radius-circle);
+      }
 
       span.title {
         padding: 0 0.5rem;

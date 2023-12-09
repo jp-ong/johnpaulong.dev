@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "./introduction.module.scss";
 
 import { Button } from "@/components/shared/button";
@@ -27,10 +29,20 @@ export const Introduction = ({
   return (
     <Container as="section" spacing="md" contentClassName={styles.introduction}>
       <header>
-        <div className={styles.greeting}>
+        <div className={styles.greetings}>
           <div>
-            <span>{prefix}</span>
-            <h1>{name}</h1>
+            <Image
+              alt=""
+              className={styles.pfp}
+              src="/assets/me.jpg"
+              width={0}
+              height={0}
+              sizes="100vw"
+            />
+            <div className={styles.text}>
+              <span>{prefix}</span>
+              <h1>{name}</h1>
+            </div>
           </div>
           <p>
             {titles.map((title) => (
