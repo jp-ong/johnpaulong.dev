@@ -1,13 +1,13 @@
 import styles from "./item.module.scss";
 
-interface Props {
+export interface Props {
   date: string;
-  title: string;
-  subtitle: string;
+  header: string;
+  subheader: string;
   body: string;
 }
 
-export const ExperienceItem = ({ date, title, subtitle, body }: Props) => {
+export const ExperienceItem = ({ date, header, subheader, body }: Props) => {
   return (
     <li className={styles.item}>
       <div className={styles.decoration}>
@@ -17,8 +17,8 @@ export const ExperienceItem = ({ date, title, subtitle, body }: Props) => {
       <div className={styles.content}>
         <div className={styles.date}>{date}</div>
         <div className={styles.header}>
-          <h3>{title}</h3>
-          <span>{subtitle}</span>
+          <h3>{header}</h3>
+          <span>{subheader}</span>
         </div>
         <p>{body}</p>
       </div>

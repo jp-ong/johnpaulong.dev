@@ -1,11 +1,23 @@
+import { getContent } from "@/api";
+
 import { Introduction, Skills, Experience } from "@/components/pages/home";
 
-export default function Home() {
+export const revalidate = parseInt(process.env.PAGE_REVALIDATE!) || false;
+
+export default async function Home() {
+  const content = await getContent();
+
+  if (!content) {
+    return <main></main>;
+  }
+
+  const { introduction, skills, experience } = content;
+
   return (
     <main>
-      <Introduction />
-      <Skills />
-      <Experience />
+      <Introduction {...introduction} />
+      <Skills {...skills} />
+      <Experience {...experience} />
     </main>
   );
 }

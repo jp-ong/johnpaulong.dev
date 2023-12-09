@@ -4,33 +4,26 @@ import { Button } from "@/components/shared/button";
 import { Container } from "@/components/shared/container";
 import { Icon } from "@/components/shared/icons";
 
-type Link = {
+interface Link {
   icon: string;
   label: string;
-};
+}
 
-export const Introduction = () => {
-  const titles = [
-    "Full Stack JavaScript Developer",
-    "React Developer",
-    "Flutter Developer",
-  ];
+interface Props {
+  titles: string[];
+  prefix: string;
+  name: string;
+  summary: string;
+  links: Link[];
+}
 
-  const prefix = "Hello, I'm";
-
-  const name = "John Paul Ong";
-
-  const summary =
-    "An Information Technology graduate located in Metro Manila, Philippines, with expertise in Web Development. I excel in translating project requirements and intricate designs into streamlined and aesthetically pleasing systems. I prioritize delivering elegant and efficient solutions, both for clients and fellow developers.";
-
-  const links: Link[] = [
-    {
-      icon: "github",
-      label: "GitHub",
-    },
-    { icon: "linkedin", label: "LinkedIn" },
-  ];
-
+export const Introduction = ({
+  titles,
+  prefix,
+  name,
+  summary,
+  links,
+}: Props) => {
   return (
     <Container as="section" spacing="md" contentClassName={styles.introduction}>
       <header>

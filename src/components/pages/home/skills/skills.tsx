@@ -2,38 +2,24 @@ import styles from "./skills.module.scss";
 
 import { Container } from "@/components/shared/container";
 
-export const Skills = () => {
-  const stacks = [
-    {
-      header: "Frontend Development",
-      items: [
-        { label: "HTML5" },
-        { label: "CSS3" },
-        { label: "JavaScript" },
-        { label: "ReactJS" },
-        { label: "NextJS" },
-      ],
-    },
-    {
-      header: "Backend Development",
-      items: [{ label: "NodeJS" }, { label: "ExpressJS" }, { label: "NestJS" }],
-    },
-    {
-      header: "Mobile Development",
-      items: [{ label: "Flutter" }],
-    },
-    {
-      header: "Database",
-      items: [{ label: "MongoDB" }, { label: "PostgreSQL" }],
-    },
-    {
-      header: "Tools",
-      items: [{ label: "Git" }, { label: "GitHub" }, { label: "Figma" }],
-    },
-  ];
+interface StackItem {
+  label: string;
+}
+
+interface Stack {
+  header: string;
+  items: StackItem[];
+}
+
+interface Props {
+  header: string;
+  stacks: Stack[];
+}
+
+export const Skills = ({ header, stacks }: Props) => {
   return (
     <Container as="section" spacing="md" contentClassName={styles.skills}>
-      <h2>Technical Skills</h2>
+      <h2>{header}</h2>
       {stacks.map((stack) => (
         <div key={stack.header} className={styles.stack}>
           <h3>{stack.header}</h3>
