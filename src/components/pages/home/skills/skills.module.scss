@@ -18,12 +18,23 @@ section.skills {
         flex-flow: column nowrap;
         gap: 0.5rem;
 
-        & > div {
+        & > img.icon {
           width: 5rem;
           height: 5rem;
 
-          border: 1px solid var(--c-button-contained-border);
-          border-radius: 0.5rem;
+          padding: 0.5rem;
+
+          border: 2px solid var(--c-button-outlined-border);
+          border-radius: var(--radius-md);
+
+          user-select: none;
+
+          transition-duration: 150ms;
+          transition-property: padding;
+
+          &:hover {
+            padding: 0.25rem;
+          }
         }
 
         & > span {

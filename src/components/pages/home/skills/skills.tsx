@@ -1,8 +1,11 @@
+import Image from "next/image";
+
 import styles from "./skills.module.scss";
 
 import { Container } from "@/components/shared/container";
 
 interface StackItem {
+  icon: string;
   label: string;
 }
 
@@ -26,7 +29,14 @@ export const Skills = ({ header, stacks }: Props) => {
           <ul>
             {stack.items.map((item) => (
               <li key={item.label}>
-                <div className={styles.logo}></div>
+                <Image
+                  alt=""
+                  src={item.icon}
+                  className={styles.icon}
+                  width={80}
+                  height={80}
+                  draggable={false}
+                />
                 <span>{item.label}</span>
               </li>
             ))}

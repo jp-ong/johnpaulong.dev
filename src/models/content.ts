@@ -18,6 +18,7 @@ interface Skills {
   stacks: {
     header: string;
     items: {
+      icon: string;
       label: string;
     }[];
   }[];
