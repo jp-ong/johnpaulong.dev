@@ -1,6 +1,8 @@
+import Script from "next/script";
+
 import "@/scss/globals.scss";
 
-import Script from "next/script";
+import { Sidebar } from "@/components/shared/sidebar";
 
 interface Props {
   children: React.ReactNode;
@@ -21,7 +23,12 @@ export default function RootLayout({ children }: Props) {
           gtag('config', '${process.env.GA_ID}');
         `}
       </Script>
-      <body>{children}</body>
+      <body>
+        <div className="root">
+          <Sidebar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

@@ -27,7 +27,12 @@ export const Introduction = ({
   links,
 }: Props) => {
   return (
-    <Container as="section" spacing="md" contentClassName={styles.introduction}>
+    <Container
+      id="about"
+      as="section"
+      spacing="md"
+      contentClassName={styles.introduction}
+    >
       <header>
         <div className={styles.greetings}>
           <div>

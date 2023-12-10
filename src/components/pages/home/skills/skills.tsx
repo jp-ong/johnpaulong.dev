@@ -21,7 +21,12 @@ interface Props {
 
 export const Skills = ({ header, stacks }: Props) => {
   return (
-    <Container as="section" spacing="md" contentClassName={styles.skills}>
+    <Container
+      id="skills"
+      as="section"
+      spacing="md"
+      contentClassName={styles.skills}
+    >
       <h2>{header}</h2>
       {stacks.map((stack) => (
         <div key={stack.header} className={styles.stack}>

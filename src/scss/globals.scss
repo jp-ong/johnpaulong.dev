@@ -22,12 +22,18 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--ff-primary);
   background: var(--c-main-background);
   color: var(--c-main-text);
+}
+
+div.root {
+  display: grid;
+  grid-template-columns: 20rem auto;
 }
 
 a {
@@ -57,4 +63,19 @@ h3 {
 
 p {
   line-height: 1.5;
+}
+
+small {
+  color: var(--c-main-lowlight);
+  font-size: var(--fs-xs);
+}
+
+address {
+  font-style: normal;
+}
+
+@media screen and (max-width: $screen-md) {
+  div.root {
+    display: block;
+  }
 }

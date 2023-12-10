@@ -4,7 +4,10 @@
   --c-main-background: #{$c-gray-100};
   --c-main-text: #{$c-purple-900};
   --c-main-highlight: #{$c-purple-500};
-  --c-main-fade: #{$c-purple-300};
+  --c-main-light: #{$c-purple-300};
+  --c-main-lowlight: #{$c-gray-500};
+  --c-main-fade: #{$c-gray-300};
+  --c-main-dark: #{$c-purple-700};
 
   --c-none: #{$c-none};
 
@@ -44,7 +47,6 @@
   --c-button-flat-text-active: #{$c-purple-500};
   --c-button-flat-border-active: #{$c-purple-200};
 
-  --c-experience-subtitle: #{$c-gray-700};
   --c-experience-dot: #{$c-purple-500};
   --c-experience-line: #{$c-purple-300};
   --c-experience-line-fade: #{$c-gray-300};

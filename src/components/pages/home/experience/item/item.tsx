@@ -18,7 +18,7 @@ export const ExperienceItem = ({ date, header, subheader, body }: Props) => {
         <div className={styles.date}>{date}</div>
         <div className={styles.header}>
           <h3>{header}</h3>
-          <span>{subheader}</span>
+          <small>{subheader}</small>
         </div>
         <p>{body}</p>
       </div>

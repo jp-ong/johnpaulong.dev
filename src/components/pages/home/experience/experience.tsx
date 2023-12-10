@@ -10,7 +10,12 @@ interface Prop {
 
 export const Experience = ({ header, items }: Prop) => {
   return (
-    <Container as="section" spacing="md" contentClassName={styles.experience}>
+    <Container
+      id="experience"
+      as="section"
+      spacing="md"
+      contentClassName={styles.experience}
+    >
       <h2>{header}</h2>
       <ul className={styles.items}>
         {items.map((item) => (

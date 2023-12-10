@@ -17,6 +17,7 @@ section.introduction {
       }
 
       img.pfp {
+        display: none;
         width: 7.5rem;
         height: 7.5rem;
         flex-shrink: 0;
@@ -27,7 +28,7 @@ section.introduction {
       span.title {
         padding: 0 0.5rem;
         color: var(--c-main-highlight);
-        border-right: 1px solid var(--c-main-fade);
+        border-right: 1px solid var(--c-main-light);
         letter-spacing: 0.8px;
 
         &:first-of-type {

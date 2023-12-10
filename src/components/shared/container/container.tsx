@@ -35,7 +35,7 @@ export const Container = ({
   ]);
 
   return (
-    <div className={cn}>
+    <div id={id} className={cn}>
       <Content as={as} contentClassName={contentCn} id={id}>
         {children}
       </Content>
@@ -43,6 +43,6 @@ export const Container = ({
   );
 };
 
-const Content = ({ as = "div", contentClassName, children, id }: Props) => {
-  return React.createElement(as, { id, className: contentClassName }, children);
+const Content = ({ as = "div", contentClassName, children }: Props) => {
+  return React.createElement(as, { className: contentClassName }, children);
 };
