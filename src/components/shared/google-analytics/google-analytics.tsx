@@ -1,5 +1,3 @@
-"use client";
-
 import Script from "next/script";
 
 const GA_ID = process.env.GA_ID!;
@@ -13,12 +11,12 @@ export const GoogleAnalytics = () => {
         />
         <Script id="google-analytics">
           {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-      gtag('config', '${process.env.GA_ID}');
-    `}
+            gtag('config', '${process.env.GA_ID}');
+          `}
         </Script>
       </>
     )
