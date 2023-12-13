@@ -8,6 +8,7 @@ interface Introduction {
   name: string;
   summary: string;
   links: {
+    href: string;
     icon: string;
     label: string;
   }[];

@@ -7,6 +7,7 @@ import { Container } from "@/components/shared/container";
 import { Icon } from "@/components/shared/icons";
 
 interface Link {
+  href: string;
   icon: string;
   label: string;
 }
@@ -62,8 +63,10 @@ export const Introduction = ({
           {links.map((link) => (
             <Button
               key={link.icon}
+              href={link.href}
               icon={<Icon icon={link.icon} />}
               label={link.label}
+              target="_blank"
               variant="outlined"
             />
           ))}
