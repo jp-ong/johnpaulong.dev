@@ -58,7 +58,13 @@ export const Sidebar = () => {
             <span>Manila City, NCR, Philippines</span>
           </address>
         </div>
-        {/* <Button variant="contained" label="Download Resume" maxWidth /> */}
+        <Button
+          variant="contained"
+          label="Download Resume"
+          href="/resume.pdf"
+          target="_blank"
+          maxWidth
+        />
         {/* <Button variant="outlined" label="Send a Message" maxWidth /> */}
       </footer>
     </aside>
