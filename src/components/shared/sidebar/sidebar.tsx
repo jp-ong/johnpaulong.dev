@@ -4,9 +4,18 @@ import Link from "next/link";
 import styles from "./sidebar.module.scss";
 
 import { Button } from "../button";
-import { GitHubIcon } from "../icons";
+import { Icon } from "../icons";
+import { getContent } from "@/api";
 
-export const Sidebar = () => {
+export const Sidebar = async () => {
+  const content = await getContent();
+
+  if (!content) {
+    return null;
+  }
+
+  const { global } = content;
+
   return (
     <aside className={styles.sidebar}>
       <header>
@@ -22,8 +31,8 @@ export const Sidebar = () => {
         </div>
         <div>
           <small>At present,</small>
-          <h1>Software Engineer</h1>
-          <h2>UBX Philippines Corporation</h2>
+          <h1>{global.currentPosition}</h1>
+          <h2>{global.currentCompany}</h2>
         </div>
       </header>
       <nav>
@@ -41,22 +50,12 @@ export const Sidebar = () => {
       </nav>
       <footer>
         <div className={styles.addresses}>
-          <address>
-            <GitHubIcon />
-            <span>jpong5202@gmail.com</span>
-          </address>
-          <address>
-            <GitHubIcon />
-            <span>jong@ubx.ph</span>
-          </address>
-          <address>
-            <GitHubIcon />
-            <span>+639173243289</span>
-          </address>
-          <address>
-            <GitHubIcon />
-            <span>Manila City, NCR, Philippines</span>
-          </address>
+          {global.addresses.map((address) => (
+            <address key={address.label}>
+              <Icon icon={address.icon} />
+              <span>{address.label}</span>
+            </address>
+          ))}
         </div>
         <Button
           variant="contained"

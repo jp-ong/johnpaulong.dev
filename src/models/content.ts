@@ -2,6 +2,15 @@ import mongoose from "mongoose";
 
 import { Experience } from "@/components/pages/home";
 
+interface Global {
+  currentPosition: string;
+  currentCompany: string;
+  addresses: {
+    icon: string;
+    label: string;
+  }[];
+}
+
 interface Introduction {
   titles: string[];
   prefix: string;
@@ -37,10 +46,22 @@ interface Experience {
 
 export interface Content extends mongoose.Document {
   version: string;
+  global: Global;
   introduction: Introduction;
   skills: Skills;
   experience: Experience;
 }
+
+const GlobalSchema = new mongoose.Schema<Global>({
+  currentPosition: String,
+  currentCompany: String,
+  addresses: [
+    {
+      icon: String,
+      label: String,
+    },
+  ],
+});
 
 const IntroductionSchema = new mongoose.Schema<Introduction>({
   titles: [String],
@@ -67,6 +88,7 @@ export const ExperienceSchema = new mongoose.Schema<Experience>({
 
 const ContentSchema = new mongoose.Schema<Content>({
   version: String,
+  global: GlobalSchema,
   introduction: IntroductionSchema,
   skills: SkillsSchema,
   experience: ExperienceSchema,

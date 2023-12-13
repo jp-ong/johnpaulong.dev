@@ -1,8 +1,14 @@
 import { GitHubIcon, LinkedInIcon } from ".";
+import { EnvelopeIcon } from "./envelope";
+import { MapPinIcon } from "./map-pin";
+import { PhoneIcon } from "./phone";
 
 export enum Icons {
-  github = "github",
-  linkedin = "linkedin",
+  GITHUB = "github",
+  LINKEDIN = "linkedin",
+  ENVELOPE = "envelope",
+  PHONE = "phone",
+  MAP_PIN = "map-pin",
 }
 
 interface Props {
@@ -11,10 +17,16 @@ interface Props {
 
 export const Icon = ({ icon }: Props) => {
   switch (icon) {
-    case Icons.github:
+    case Icons.GITHUB:
       return <GitHubIcon />;
-    case Icons.linkedin:
+    case Icons.LINKEDIN:
       return <LinkedInIcon />;
+    case Icons.ENVELOPE:
+      return <EnvelopeIcon />;
+    case Icons.PHONE:
+      return <PhoneIcon />;
+    case Icons.MAP_PIN:
+      return <MapPinIcon />;
     default:
       return null;
   }
