@@ -3,13 +3,16 @@ import Link from "next/link";
 import styles from "./button.module.scss";
 
 import { createClassName } from "@/utils";
+import { HTMLAttributeAnchorTarget } from "react";
 
 interface Props {
   label: string;
+  download?: boolean;
   href?: string;
   icon?: React.ReactNode;
   maxWidth?: boolean;
   onClick?: () => void;
+  target?: HTMLAttributeAnchorTarget;
   variant?: "contained" | "outlined" | "flat";
 }
 
@@ -19,6 +22,7 @@ export const Button = ({
   icon,
   maxWidth,
   onClick,
+  target,
   variant = "flat",
 }: Props) => {
   const cn = createClassName([
@@ -28,7 +32,7 @@ export const Button = ({
   ]);
 
   return href ? (
-    <Link className={cn} href={href}>
+    <Link className={cn} href={href} target={target}>
       {icon}
       <span>{label}</span>
     </Link>

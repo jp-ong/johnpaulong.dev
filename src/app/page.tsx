@@ -8,7 +8,7 @@ export default async function Home() {
   const content = await getContent();
 
   if (!content) {
-    return <main></main>;
+    return null;
   }
 
   const { introduction, skills, experience } = content;
