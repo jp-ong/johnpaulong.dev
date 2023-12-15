@@ -1,0 +1,55 @@
+@import "../variables";
+
+@mixin theme-dark {
+  --c-main-background: #{$c-gray-900};
+  --c-main-text: #{$c-purple-100};
+  --c-main-highlight: #{$c-purple-300};
+  --c-main-light: #{$c-purple-600};
+  --c-main-lowlight: #{$c-gray-300};
+  --c-main-fade: #{$c-gray-500};
+  --c-main-dark: #{$c-purple-200};
+
+  --c-none: #{$c-none};
+
+  --c-button-contained-background: #{$c-purple-500};
+  --c-button-contained-text: #{$c-purple-100};
+  --c-button-contained-border: #{$c-purple-500};
+
+  --c-button-contained-background-hover: #{$c-purple-400};
+  --c-button-contained-text-hover: #{$c-purple-100};
+  --c-button-contained-border-hover: #{$c-purple-400};
+
+  --c-button-contained-background-active: #{$c-purple-600};
+  --c-button-contained-text-active: #{$c-purple-100};
+  --c-button-contained-border-active: #{$c-purple-600};
+
+  --c-button-outlined-background: #{$c-none};
+  --c-button-outlined-text: #{$c-purple-300};
+  --c-button-outlined-border: #{$c-purple-600};
+
+  --c-button-outlined-background-hover: #{$c-purple-700};
+  --c-button-outlined-text-hover: #{$c-purple-300};
+  --c-button-outlined-border-hover: #{$c-purple-500};
+
+  --c-button-outlined-background-active: #{$c-purple-800};
+  --c-button-outlined-text-active: #{$c-purple-300};
+  --c-button-outlined-border-active: #{$c-purple-700};
+
+  --c-button-flat-background: #{$c-none};
+  --c-button-flat-text: #{$c-purple-300};
+  --c-button-flat-border: #{$c-none};
+
+  --c-button-flat-background-hover: #{$c-purple-700};
+  --c-button-flat-text-hover: #{$c-purple-300};
+  --c-button-flat-border-hover: #{$c-purple-700};
+
+  --c-button-flat-background-active: #{$c-purple-800};
+  --c-button-flat-text-active: #{$c-purple-300};
+  --c-button-flat-border-active: #{$c-purple-800};
+
+  --c-experience-dot: #{$c-purple-300};
+  --c-experience-line: #{$c-purple-500};
+  --c-experience-line-fade: #{$c-gray-500};
+  --c-experience-date-background: #{$c-purple-600};
+  --c-experience-date-text: #{$c-purple-100};
+}
