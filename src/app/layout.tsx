@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Head from "next/head";
 
 import "@/scss/globals.scss";
 
@@ -10,9 +9,9 @@ interface Props {
   children: React.ReactNode;
 }
 
-const title = "John Paul Ong | Web Developer";
+const title = "John Paul Ong | Software Engineer";
 const description =
-  "Web development expert in Metro Manila. Translates designs into efficient systems. Delivers elegant solutions for clients and codebase for developers.";
+  "Software Engineer with 2 years of experience specializing in frontend development, including mobile development. Skilled in creating dynamic and responsive web and mobile applications, with a strong focus on user experience and performance. Adept at utilizing modern frameworks and technologies to deliver high-quality solutions. Seeking to leverage my expertise in frontend development to contribute to innovative projects and drive business success.";
 const baseUrl = "https://johnpaulong.dev";
 
 export const metadata: Metadata = {
